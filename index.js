@@ -1,7 +1,6 @@
 // TODO: Include packages needed for this application
-const util = require('util');
-const fs = require('fs');
 const { default: inquirer } = require('inquirer');
+const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown');
 
 // TODO: Create an array of questions for user input
@@ -80,7 +79,7 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'extraInfo',
+        name: 'usage',
         message: 'What does the user need to know about using the repo?',
     },
     {
@@ -103,9 +102,9 @@ function writeToFile(fileName, data) {
 // TODO: Create a function to initialize app
 function init() {
     inquirer.prompt(questions)
-    .then(function (userInput) {
-        console.log(userInput)
-        writeToFile('README.md', generateMarkdown(userInput));
+    .then(function (input) {
+        console.log(input)
+        writeToFile('README.md', generateMarkdown(input));
     })
 }
 
