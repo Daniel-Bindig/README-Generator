@@ -103,7 +103,7 @@ function init() {
     inquirer.prompt(questions)
     .then(function (userInput) {
         console.log(userInput)
-        writeToFile('README.md', generateMarkdown(userInput));
+        writeToFile('sample-README.md', generateMarkdown(userInput));
     })
 }
 
