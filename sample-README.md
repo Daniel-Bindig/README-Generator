@@ -11,7 +11,7 @@
   ## Installation:
   npm i
   ## Usage
-  Any additional information about the ussage
+  Any additional information about the usage
   ## Contribution
   Email me to contribute
   ## Credits
